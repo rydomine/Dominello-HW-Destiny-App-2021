@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Homework: Destiny App Dominello 2021</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="destiny-app">
+  
+  <div v-for="card in cards">
+    
+    <div class="card" v-bind:class="card.color">
+<!--  color      -->
+      
+      
+      <div class="name">{{card.name}}</div>
+<!--name of the card        -->
+      
+      
+      <div class="rarity" v-bind:class="{rare:card.rarity, legendary:!card.rarity}">{{card.setNumber}}</div>
+<!--   rarity number     -->
+      
+      
+      <div class="affl" v-bind:class="card.affl">{{card.affl}}</div>
+<!-- villian or hero  -->
+      
+      <div class="health">{{card.health}}</div>
+<!-- health bar -->
+      
+      
+      <img v-bind:src="card.img"></img>  
+<!--for img placement-->
+
+    
+<!-- Each card must be rendered to the HTML file.
+Each card gains the class "blue, red, yellow, etc." based on the color property.
+Cards must have its setNumber in the bottom right and be colored based on its rarity:
+If true gains 'rare' class
+If false, gains 'legendary' class
+Based on the affl property, a box, the affl should be written inside this container and given the class based on its affl name (so it gains hero class if affl is a hero).
+The character's image portrait should appear behind all the elements.
+Their health should appear in the top right with the health value inside it.     -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
